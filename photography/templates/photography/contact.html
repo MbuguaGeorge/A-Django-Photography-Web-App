@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Creative Studio</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+        <Link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css" />
+        <link rel="stylesheet" type="text/css" href="{% static 'photography/css/style.css' %}">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <h2>Gleam</h2>
+            </div>
+            <ul class="nav-links" >
+                <li>
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'gallery' %}">Gallery</a>
+                </li>
+                <li>
+                    <a href="about.html">About me</a>
+                </li>
+                <li>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+            </ul>
+            <div class="header">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        <div class="contact">
+            <div class="container">
+                <div class="contact-page">
+                    <h2>Contact</h2>
+                    <form action="" method='post'>
+                       {% csrf_token %}
+                       {{ form.as_table }}
+                        <input 
+                            type="submit"
+                            value="SEND MESSAGE"
+                            class="btn"
+                        />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'photography/js/main.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,239 @@
+@charset "UTF-8";
+html {
+    font-size: 90%;
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1d1d1d;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    color: whitesmoke;
+}
+.logo h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+
+/* End Of Navigation */
+
+/* HomePage */
+
+.home{
+    height: 100vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, .5)), url(../images/alex-azabache-riLA6oy6ekM-unsplash.jpg) center no-repeat;
+    background-size: cover;
+}
+.content h1{
+    text-align: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 2px;
+}
+.content{
+    height: 50rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.explore{
+    text-align: center;
+}
+.button{
+    border: 2px solid #ddd;
+    text-align: center;
+    padding: 15px 40px;
+    margin: 20px auto;
+    border-radius: 30px;
+    transition: 0.25s;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    align-content: center;
+}
+.button:hover{
+    background-color: turquoise;
+    border: 2px solid turquoise;
+    color: black;
+}
+.content p{
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* End of HomePage */
+
+/* Contact Page Form */
+
+.contact{
+    padding: 20px;
+}
+
+.contact-page input[type="text"],.contact-page input[type="email"],.contact-page[type="text"]{
+    display: flex;
+    padding: 15px;
+    width: 150vh;
+    border: 1px #ddd solid;
+    border-radius: 4px;
+    font-size: 1.2rem;
+}
+
+.contact-page input[type="submit"]{
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #ddd;
+    padding: 15px 40px;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color: #ddd;
+    font-size: 1.2rem;
+}
+.contact-page{
+    height: 40rem;
+
+}
+.contact-page input[type="submit"]:hover{
+    background: #2ecc71;
+    color: white;
+}
+.contact-page h2{
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 0;
+    font-weight: 800;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+/* End Of Contact Page Form */
+
+/* Gallery Page */
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column{
+    float: left;
+    width: 100%;
+}
+.column img{
+    width: 25%;
+}
+.galore{
+    padding: 60px;
+    text-align: center;
+}
+
+
+/* End Of Gallery Page */
+
+/*----Responsiveness----*/
+
+@media only screen and (max-width:1024px){
+    nav ul{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:880px){
+    nav ul{
+        position: absolute;
+        left: 0;
+        height: 100vh;
+        top: 0;
+        background-color: #1d1d1d;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+    }
+    nav{
+        display: flex;
+    }
+    .header{
+        display: block;
+        cursor: pointer;
+    }
+    .header div{
+        background-color: #ddd;
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .column img{
+        display: block;
+        padding: 1px;
+        width: 100%;
+    }
+    .column{
+        margin-top: 20px;
+    }
+}
+.nav-active{
+    transform: translateX(0%);
+}
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
