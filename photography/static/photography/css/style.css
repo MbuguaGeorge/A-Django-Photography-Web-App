@@ -63,7 +63,7 @@ nav ul li a{
     letter-spacing: 2px;
 }
 .content{
-    height: 50rem;
+    height: 42rem;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -104,13 +104,10 @@ nav ul li a{
 
 /* Contact Page Form */
 
-.contact{
-    padding: 20px;
-}
 
 .contact-page input[type="text"],.contact-page input[type="email"],.contact-page[type="text"]{
     display: flex;
-    padding: 15px;
+    padding: 20px;
     width: 150vh;
     border: 1px #ddd solid;
     border-radius: 4px;
@@ -130,10 +127,7 @@ nav ul li a{
     background-color: #ddd;
     font-size: 1.2rem;
 }
-.contact-page{
-    height: 40rem;
 
-}
 .contact-page input[type="submit"]:hover{
     background: #2ecc71;
     color: white;
@@ -213,6 +207,14 @@ nav ul li a{
     }
     .column{
         margin-top: 20px;
+    }
+    .contact-page input[type="text"],.contact-page input[type="email"],.contact-page[type="text"]{
+        display: flex;
+        padding: 20px;
+        width: 80vh;
+        border: 1px #ddd solid;
+        border-radius: 4px;
+        font-size: 1.2rem;
     }
 }
 .nav-active{
